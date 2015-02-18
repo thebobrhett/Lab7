@@ -12,6 +12,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import lab07.PushRandomPanel;
 
 /**
  *
@@ -50,11 +51,11 @@ public class PushRandomPanelTester {
         frame.pack();
         frame.setVisible(true);
         
-        mPush.doClick();
-        String str = mLabel.getText();
+        panel.generateRandom();
+        String str = panel.getResult();
         //String str = "1";  // for testing
         int result = Integer.parseInt(str);
-        //System.out.println("Result: " + mResult); // for testing
-        assertTrue(result >= 1 || result <= 100);
+        System.out.println("Result: " + result); // for testing
+        assertTrue(result >= 1 && result <= 100);
     }
 }

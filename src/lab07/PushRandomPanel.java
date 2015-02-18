@@ -19,8 +19,8 @@ import java.util.Random;
  */
 public class PushRandomPanel extends JPanel {
     private int mResult;
-    private JButton mPush;
-    private JLabel mLabel;
+    public JButton mPush;
+    public JLabel mLabel;
     
     //****************
     // Constructor: Sets up the GUI
@@ -38,6 +38,20 @@ public class PushRandomPanel extends JPanel {
         
         this.setBackground(Color.lightGray);
         this.setPreferredSize(new Dimension(300, 100));
+    }
+    
+    //****************
+    // A method to programatically push the button for testing
+    //****************
+    public void generateRandom() {
+        mPush.doClick();
+    }
+    
+    //****************
+    // A method to return the current value of the random number.
+    //****************
+    public String getResult() {
+        return mLabel.getText();
     }
     
     //****************

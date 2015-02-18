@@ -20,11 +20,13 @@ public class PushRandom {
     //****************
     public static void main (String[] args) {
         JFrame frame = new JFrame("Push Random");
+        frame.add(new PushRandomPanel());
+        
+        //PushRandomPanel panel = new PushRandomPanel();
+        //frame.getContentPane().add(panel);
+        //frame.add(panel);
+        
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
-        PushRandomPanel panel = new PushRandomPanel();
-        frame.getContentPane().add(panel);
-        
         frame.pack();
         frame.setVisible(true);
     }
